@@ -26,8 +26,12 @@ namespace CreateATownWithClass
         public string Zip { get; }
         public int CurrentOccupants { get { return _CurrentOccupants; } }
         private int _CurrentOccupants;
-        
 
+        public House(string House)
+        {
+            this.BuildingType = House;
+
+        }
 
 
         public string DisplayName()
