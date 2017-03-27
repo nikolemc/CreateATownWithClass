@@ -1,0 +1,6 @@
+C:\Users\Nikole McStanley\tiy\week-3\day-1\CreateATownWithClass\CreateATownWithClass\CreateATownWithClass\obj\Debug\CreateATownWithClass.csprojResolveAssemblyReference.cache
+C:\Users\Nikole McStanley\tiy\week-3\day-1\CreateATownWithClass\CreateATownWithClass\CreateATownWithClass\bin\Debug\CreateATownWithClass.exe.config
+C:\Users\Nikole McStanley\tiy\week-3\day-1\CreateATownWithClass\CreateATownWithClass\CreateATownWithClass\bin\Debug\CreateATownWithClass.exe
+C:\Users\Nikole McStanley\tiy\week-3\day-1\CreateATownWithClass\CreateATownWithClass\CreateATownWithClass\bin\Debug\CreateATownWithClass.pdb
+C:\Users\Nikole McStanley\tiy\week-3\day-1\CreateATownWithClass\CreateATownWithClass\CreateATownWithClass\obj\Debug\CreateATownWithClass.exe
+C:\Users\Nikole McStanley\tiy\week-3\day-1\CreateATownWithClass\CreateATownWithClass\CreateATownWithClass\obj\Debug\CreateATownWithClass.pdb
