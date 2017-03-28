@@ -19,16 +19,17 @@ namespace CreateATownWithClass
         public int Floors { get; set; }
         public int Bathrooms { get; set; }
         public double Volume { get; }
-        public string Address1 { get; }
-        public string Address2 { get; }
-        public string City { get; }
-        public string State { get; }
-        public string Zip { get; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
         public int CurrentOccupants { get { return _CurrentOccupants; } }
         private int _CurrentOccupants;
         public int NumberOfStudents { get; set; }
         private bool InSession { get; set; }
-        private int NumberofTeachers { get; set; }
+        private int NumberOfTeachers { get; set; }
+       
 
         public School(string School)
         {
@@ -39,8 +40,8 @@ namespace CreateATownWithClass
         public string DisplayName()
         {
             return this.PropertyName;
-        }
 
+        }
         public override string ToString()
         {
             return ($"{BuildingType} : {PropertyName}");
@@ -54,6 +55,7 @@ namespace CreateATownWithClass
                 return Address1 + Address2 + City + State + Zip;
             }
         }
+
 
         public void IncreateOccupants()
         {
@@ -69,10 +71,38 @@ namespace CreateATownWithClass
 
         public string TeacherStudentRatio()
         {
-                      
-                return "${this.NumberofTeacher}:{this.NumberOfStudent}";
-            
+
+            Reduce(CalcGCD(NumberOfTeachers, NumberOfStudents));
+            return $"{this.NumberOfTeachers}:{this.NumberOfStudents}";
+
         }
+
+        private int CalcGCD(int _NumberOfTeachers, int _NumberOfStudents) //Update the TeacherStudentRadio to return the lowest form (example: 2:10, should be 1:5)
+        {
+            while (_NumberOfStudents != 0)
+            {
+                int tempNumber = _NumberOfStudents;
+                _NumberOfStudents = _NumberOfTeachers % _NumberOfStudents;
+                _NumberOfTeachers = tempNumber;
+            }
+            return _NumberOfTeachers; //value will be No of Teachers as GCD
+        }
+
+        private void Reduce(int GCD) //GCD Greatest Common Denominator
+        {
+            NumberOfTeachers /= GCD;  //Numerator
+            NumberOfStudents /= GCD; //Denominator
+        }
+
+        
+
+        public School(int NumberofTeachers, int NumberofStudents) //Add a constructor to the school that sets the number of teachers and the numbers of students
+        {
+            this.NumberOfTeachers = NumberOfTeachers;
+            this.NumberOfStudents = NumberOfStudents;
+        }
+
+
 
     }
 }

@@ -19,17 +19,17 @@ namespace CreateATownWithClass
         public int Floors { get; set; }
         public int Bathrooms { get; set; }
         public double Volume { get; }
-        public string Address1 { get; }
-        public string Address2 { get; }
-        public string City { get; }
-        public string State { get; }
-        public string Zip { get; }
+        public string Address1 { get; set;  }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
         public int CurrentOccupants { get { return _CurrentOccupants; } }
         private int _CurrentOccupants;
         private double AmountOfMoney { get { return _AmountofMoney; } }
         private double _AmountofMoney;
 
-        public Bank(string School)
+        public Bank(string Bank)
         {
             this.BuildingType = Bank;
 
@@ -67,6 +67,7 @@ namespace CreateATownWithClass
 
         }
 
+        
         public void DepositMoney(double ammount)
         {
             this._AmountofMoney+=ammount;
@@ -75,7 +76,12 @@ namespace CreateATownWithClass
 
         public void WithdrawMoney(double ammount)
         {
-            this._AmountofMoney-=ammount;
+            this._AmountofMoney-= ammount;
+
+        }
+        public Bank (double ammount) //Add a constructor to the bank that sets the amount of money
+        {
+            this._AmountofMoney = ammount;
 
         }
 

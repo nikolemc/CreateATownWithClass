@@ -19,11 +19,11 @@ namespace CreateATownWithClass
         public int Floors { get; set; }
         public int Bedrooms { get; set; }
         public int Bathrooms { get; set; }
-        public string Address1 { get; }
-        public string Address2 { get; }
-        public string City { get; }
-        public string State { get; }
-        public string Zip { get; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
         public int CurrentOccupants { get { return _CurrentOccupants; } }
         private int _CurrentOccupants;
 
@@ -64,6 +64,12 @@ namespace CreateATownWithClass
         {
             this._CurrentOccupants--;
 
+        }
+
+        public House(int Bathrooms, int Bedrooms) //Add a constructor to the house that sets the number of baths and number of bedrooms
+        {
+            this.Bathrooms = Bathrooms;
+            this.Bedrooms = Bedrooms;
         }
 
     }
